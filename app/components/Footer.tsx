@@ -1,39 +1,42 @@
-'use client'
-import { motion } from 'motion/react';
-import { Heart, Github, Linkedin, Mail } from 'lucide-react';
+"use client";
+import { motion } from "motion/react";
+import { Heart, Github, Linkedin, Mail } from "lucide-react";
 
 interface FooterProps {
-  language: 'pt' | 'en';
+  language: "pt" | "en";
 }
 
 export function Footer({ language }: FooterProps) {
   const content = {
     pt: {
-      made: 'Feito com',
-      by: 'por Demerson Guilherme',
-      rights: 'DGTech Studios. Todos os direitos reservados.'
+      made: "Feito com",
+      by: "por Demerson Guilherme",
+      rights: "DGTech Inc. Todos os direitos reservados.",
     },
     en: {
-      made: 'Made with',
-      by: 'by Demerson Guilherme',
-      rights: 'DGTech Studios. All rights reserved.'
-    }
+      made: "Made with",
+      by: "by Demerson Guilherme",
+      rights: "DGTech Inc. All rights reserved.",
+    },
   };
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:seu@email.com', label: 'Email' }
+    { icon: Github, href: "https://github.com", label: "GitHub" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Mail, href: "mailto:seu@email.com", label: "Email" },
   ];
 
   return (
     <footer className="py-12 border-t border-border relative overflow-hidden">
-
       <div className="absolute inset-0 opacity-5">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'linear-gradient(rgba(255, 107, 53, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53, 0.1) 1px, transparent 1px)',
-          backgroundSize: '30px 30px'
-        }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255, 107, 53, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53, 0.1) 1px, transparent 1px)",
+            backgroundSize: "30px 30px",
+          }}
+        />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

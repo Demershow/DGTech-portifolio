@@ -21,10 +21,10 @@ export function Projects({ language }: ProjectsProps) {
       viewCode: "Ver Código",
       projects: [
         {
-          title: "RaceTrack Pro",
+          title: "Carspotting App",
           description:
-            "Plataforma de gerenciamento de corridas com telemetria em tempo real e análise de performance.",
-          tags: ["React", "Node.js", "WebSockets", "TypeScript"],
+            "Plataforma de gerenciamento de spotting de carros com IA, para apaixonados pelos motores como eu.",
+          tags: ["React native", "Django", "IA", "TypeScript"],
           image:
             "https://images.unsplash.com/photo-1747115986530-b926e92bf563?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYWNpbmclMjBjYXIlMjBzcGVlZHxlbnwxfHx8fDE3Njc5MTA1OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
           github: "https://github.com",
@@ -43,8 +43,8 @@ export function Projects({ language }: ProjectsProps) {
         {
           title: "PhotoStream",
           description:
-            "Plataforma de portfólio para fotógrafos com galeria responsiva e edição de imagens.",
-          tags: ["Vue.js", "Firebase", "Cloudinary", "GSAP"],
+            "Plataforma de portfólio para fotógrafos com galeria responsiva.",
+          tags: ["Next.js", "Firebase", "Cloudinary", "GSAP"],
           image:
             "https://images.unsplash.com/photo-1622319977720-9949ac28adc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMGNhbWVyYXxlbnwxfHx8fDE3Njc5MDQ1OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
           github: "https://github.com",
@@ -71,14 +71,13 @@ export function Projects({ language }: ProjectsProps) {
           demo: "https://example.com",
         },
         {
-          title: "CloudSync Manager",
+          title: "NoobPrice",
           description:
-            "Gerenciador de sincronização multi-cloud com backup automático e versionamento de arquivos.",
-          tags: ["Angular", "AWS", "Azure", "Docker"],
-          image:
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNjc3OTU3NDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
+            "Comparador de preços de jogos da steam, feito por um gamer, para gamers.",
+          tags: ["Next.js", "Vercel", "JS"],
+          image: "/img/Noobprice.png",
+          github: "https://github.com/Demershow/noob-price",
+          demo: "https://chromewebstore.google.com/detail/noobprice/pbhpckfneonklaalekiakpbadgeaapcg",
         },
       ],
     },
@@ -89,10 +88,10 @@ export function Projects({ language }: ProjectsProps) {
       viewCode: "View Code",
       projects: [
         {
-          title: "RaceTrack Pro",
+          title: "Carspotting App",
           description:
-            "Racing management platform with real-time telemetry and performance analysis.",
-          tags: ["React", "Node.js", "WebSockets", "TypeScript"],
+            "Management of car spotting with AI, for the passionates by the engines, like me.",
+          tags: ["React native", "Django", "IA", "TypeScript"],
           image:
             "https://images.unsplash.com/photo-1747115986530-b926e92bf563?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYWNpbmclMjBjYXIlMjBzcGVlZHxlbnwxfHx8fDE3Njc5MTA1OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
           github: "https://github.com",
@@ -139,14 +138,13 @@ export function Projects({ language }: ProjectsProps) {
           demo: "https://example.com",
         },
         {
-          title: "CloudSync Manager",
+          title: "NoobPrice",
           description:
-            "Multi-cloud synchronization manager with automatic backup and file versioning.",
-          tags: ["Angular", "AWS", "Azure", "Docker"],
-          image:
-            "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMHRlY2hub2xvZ3l8ZW58MXx8fHwxNjc3OTU3NDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
+            "Steam games price comparator, made for gamers, by gamers",
+          tags: ["Next.js", "Vercel", "JS"],
+          image: "/img/Noobprice.png",
+          github: "https://github.com/Demershow/noob-price",
+          demo: "https://chromewebstore.google.com/detail/noobprice/pbhpckfneonklaalekiakpbadgeaapcg",
         },
       ],
     },

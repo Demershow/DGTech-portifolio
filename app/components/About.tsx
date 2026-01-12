@@ -1,77 +1,87 @@
-'use client'
-import { motion } from 'motion/react';
-import { Car, Gamepad2, Camera, Code2 } from 'lucide-react';
+"use client";
+import { motion } from "motion/react";
+import { Car, Gamepad2, Camera, Code2 } from "lucide-react";
 
 interface AboutProps {
-  language: 'pt' | 'en';
+  language: "pt" | "en";
 }
 
 export function About({ language }: AboutProps) {
   const content = {
     pt: {
-      title: 'Sobre Mim',
-      description: 'Sou um desenvolvedor de software apaixonado por criar soluções digitais que fazem a diferença. Quando não estou codando, você pode me encontrar dirigindo, jogando, ou capturando momentos únicos através da lente.',
+      title: "Sobre Mim",
+      description:
+        "Sou um desenvolvedor de software apaixonado por criar soluções digitais que fazem a diferença. Quando não estou codando, você pode me encontrar dirigindo, jogando, ou capturando momentos únicos através da lente.",
       passions: [
         {
           icon: Car,
-          title: 'Carros & Corridas',
-          description: 'A velocidade e a precisão das corridas me inspiram a escrever código eficiente e performático.'
+          title: "Carros & Corridas",
+          description:
+            "A velocidade e a precisão das corridas me inspiram a escrever código eficiente e performático.",
         },
         {
           icon: Gamepad2,
-          title: 'Gaming',
-          description: 'Os jogos me ensinaram sobre lógica, estratégia e a importância de uma boa UX.'
+          title: "Gaming",
+          description:
+            "Os jogos me ensinaram sobre lógica, estratégia e a importância de uma boa UX.",
         },
         {
           icon: Camera,
-          title: 'Fotografia',
-          description: 'Capturar o momento perfeito é como encontrar a solução perfeita para um problema complexo.'
+          title: "Fotografia",
+          description:
+            "Capturar o momento perfeito é como encontrar a solução perfeita para um problema complexo.",
         },
         {
           icon: Code2,
-          title: 'Desenvolvimento',
-          description: 'Transformar ideias em realidade através do código é minha maior paixão.'
-        }
+          title: "Desenvolvimento",
+          description:
+            "Transformar ideias em realidade através do código é minha maior paixão.",
+        },
       ],
       stats: [
-        { value: '5+', label: 'Anos de Experiência' },
-        { value: '50+', label: 'Projetos Concluídos' },
-        { value: '30+', label: 'Clientes Satisfeitos' },
-        { value: '∞', label: 'Cafés Tomados' }
-      ]
+        { value: "3+", label: "Anos de Experiência" },
+        { value: "25+", label: "Projetos Concluídos" },
+        { value: "30+", label: "Clientes Satisfeitos" },
+        { value: "∞", label: "Cafés Tomados" },
+      ],
     },
     en: {
-      title: 'About Me',
-      description: 'I\'m a software developer passionate about creating digital solutions that make a difference. When I\'m not coding, you can find me driving, gaming, or capturing unique moments through the lens.',
+      title: "About Me",
+      description:
+        "I'm a software developer passionate about creating digital solutions that make a difference. When I'm not coding, you can find me driving, gaming, or capturing unique moments through the lens.",
       passions: [
         {
           icon: Car,
-          title: 'Cars & Racing',
-          description: 'The speed and precision of racing inspire me to write efficient and performant code.'
+          title: "Cars & Racing",
+          description:
+            "The speed and precision of racing inspire me to write efficient and performant code.",
         },
         {
           icon: Gamepad2,
-          title: 'Gaming',
-          description: 'Games taught me about logic, strategy, and the importance of good UX.'
+          title: "Gaming",
+          description:
+            "Games taught me about logic, strategy, and the importance of good UX.",
         },
         {
           icon: Camera,
-          title: 'Photography',
-          description: 'Capturing the perfect moment is like finding the perfect solution to a complex problem.'
+          title: "Photography",
+          description:
+            "Capturing the perfect moment is like finding the perfect solution to a complex problem.",
         },
         {
           icon: Code2,
-          title: 'Development',
-          description: 'Turning ideas into reality through code is my greatest passion.'
-        }
+          title: "Development",
+          description:
+            "Turning ideas into reality through code is my greatest passion.",
+        },
       ],
       stats: [
-        { value: '5+', label: 'Years of Experience' },
-        { value: '50+', label: 'Completed Projects' },
-        { value: '30+', label: 'Happy Clients' },
-        { value: '∞', label: 'Coffees Consumed' }
-      ]
-    }
+        { value: "3+", label: "Years of Experience" },
+        { value: "25+", label: "Completed Projects" },
+        { value: "30+", label: "Happy Clients" },
+        { value: "∞", label: "Coffees Consumed" },
+      ],
+    },
   };
 
   return (
@@ -122,7 +132,7 @@ export function About({ language }: AboutProps) {
             </motion.div>
           ))}
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -144,7 +154,9 @@ export function About({ language }: AboutProps) {
               >
                 {stat.value}
               </motion.div>
-              <div className="text-sm md:text-base text-muted-foreground">{stat.label}</div>
+              <div className="text-sm md:text-base text-muted-foreground">
+                {stat.label}
+              </div>
             </motion.div>
           ))}
         </motion.div>

@@ -1,66 +1,95 @@
-'use client'
-import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
-import { useState } from 'react';
+"use client";
+import { motion } from "motion/react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { useState } from "react";
 
 interface ContactProps {
-  language: 'pt' | 'en';
+  language: "pt" | "en";
 }
 
 export function Contact({ language }: ContactProps) {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
+
+  const [result, setResult] = useState("");
 
   const content = {
     pt: {
-      title: 'Vamos Trabalhar Juntos',
-      subtitle: 'Tem um projeto em mente? Entre em contato!',
+      title: "Vamos Trabalhar Juntos",
+      subtitle: "Tem um projeto em mente? Entre em contato!",
       form: {
-        name: 'Seu Nome',
-        email: 'Seu Email',
-        message: 'Sua Mensagem',
-        send: 'Enviar Mensagem',
-        success: 'Mensagem enviada com sucesso!'
+        name: "Seu Nome",
+        email: "Seu Email",
+        message: "Sua Mensagem",
+        send: "Enviar Mensagem",
+        success: "Mensagem enviada com sucesso!",
       },
       info: [
-        { icon: Mail, text: 'seu@email.com', href: 'mailto:seu@email.com' },
-        { icon: Phone, text: '+55 (11) 99999-9999', href: 'tel:+5511999999999' },
-        { icon: MapPin, text: 'São Paulo, Brasil', href: '#' }
-      ]
+        {
+          icon: Mail,
+          text: "demersontorres520@gmail.com",
+          href: "mailto:demersontorres520@gmail.com",
+        },
+        {
+          icon: Phone,
+          text: "+55 (13) 97426-7835",
+          href: "tel:+5513974267835",
+        },
+        { icon: MapPin, text: "São Paulo, Brasil", href: "#" },
+      ],
     },
     en: {
-      title: 'Let\'s Work Together',
-      subtitle: 'Have a project in mind? Get in touch!',
+      title: "Let's Work Together",
+      subtitle: "Have a project in mind? Get in touch!",
       form: {
-        name: 'Your Name',
-        email: 'Your Email',
-        message: 'Your Message',
-        send: 'Send Message',
-        success: 'Message sent successfully!'
+        name: "Your Name",
+        email: "Your Email",
+        message: "Your Message",
+        send: "Send Message",
+        success: "Message sent successfully!",
       },
       info: [
-        { icon: Mail, text: 'your@email.com', href: 'mailto:your@email.com' },
-        { icon: Phone, text: '+55 (11) 99999-9999', href: 'tel:+5511999999999' },
-        { icon: MapPin, text: 'São Paulo, Brazil', href: '#' }
-      ]
-    }
+        {
+          icon: Mail,
+          text: "demersontorres520@gmail.com",
+          href: "mailto:demersontorres520@gmail.com",
+        },
+        {
+          icon: Phone,
+          text: "+55 (13) 97426-7835",
+          href: "tel:+5513974267835",
+        },
+        { icon: MapPin, text: "São Paulo, Brazil", href: "#" },
+      ],
+    },
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData);
-    alert(content[language].form.success);
-    setFormData({ name: '', email: '', message: '' });
+    const formData = new FormData(e.currentTarget);
+
+    formData.append("access_key", "c7729844-02ce-4326-88c4-a0435958517e");
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    const data = await response.json();
+    setResult(
+      data.success ? "Sucesso!" : "Erro, se possivel contate o administrador"
+    );
+    setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -99,9 +128,9 @@ export function Contact({ language }: ContactProps) {
             <div>
               <h3 className="text-2xl mb-6">Get in Touch</h3>
               <p className="text-muted-foreground mb-8">
-                {language === 'pt' 
-                  ? 'Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte de suas visões.'
-                  : 'I\'m always open to discussing new projects, creative ideas, or opportunities to be part of your visions.'}
+                {language === "pt"
+                  ? "Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de fazer parte de suas visões."
+                  : "I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions."}
               </p>
             </div>
 
@@ -188,6 +217,8 @@ export function Contact({ language }: ContactProps) {
                 <Send className="w-5 h-5" />
                 <span>{content[language].form.send}</span>
               </motion.button>
+
+              <p>{result}</p>
             </form>
           </motion.div>
         </div>
