@@ -71,7 +71,7 @@ export function Contact({ language }: ContactProps) {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
-    formData.append("access_key", "c7729844-02ce-4326-88c4-a0435958517e");
+    formData.append("access_key", "6b71dc83-b409-4394-a4f5-bcc89badfc48");
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       body: formData,
@@ -210,7 +210,7 @@ export function Contact({ language }: ContactProps) {
 
               <motion.button
                 type="submit"
-                className="w-full px-6 py-4 bg-linear-to-r from-primary to-secondary rounded-lg flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-primary/50 transition-shadow"
+                className="cursor-pointer w-full px-6 py-4 bg-linear-to-r from-primary to-secondary rounded-lg flex items-center justify-center gap-2 hover:shadow-xl hover:shadow-primary/50 transition-shadow"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
