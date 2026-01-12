@@ -13,7 +13,7 @@ export function Header({ language, onLanguageChange }: HeaderProps) {
   const [scrolled, setScrolled] = useState(false);
 
   useLayoutEffect(() => {
-    const update = () => setScrolled(window.scrollY > 50);
+    const update = () => setScrolled(window.scrollY > 10);
 
     update();
 

@@ -1,85 +1,73 @@
-'use client'
-import { motion } from 'motion/react';
-import { Github, Linkedin, Mail, ChevronDown } from 'lucide-react';
+"use client";
+import { motion } from "motion/react";
+import { Github, Linkedin, Mail, ChevronDown } from "lucide-react";
 
 interface HeroProps {
-  language: 'pt' | 'en';
+  language: "pt" | "en";
 }
 
 export function Hero({ language }: HeroProps) {
   const content = {
     pt: {
-      greeting: 'Olá, eu sou ',
-      name: 'Demerson Guilherme',
-      title: 'Desenvolvedor Full Stack',
-      subtitle: 'Transformando café em código e ideias em realidade',
-      cta: 'Ver Projetos',
-      scroll: 'Role para descobrir mais'
+      greeting: "Olá, eu sou ",
+      name: "Demerson Guilherme",
+      title: "Desenvolvedor Full Stack",
+      subtitle: "Transformando café em código e ideias em realidade",
+      cta: "Ver Projetos",
+      scroll: "Role para descobrir mais",
     },
     en: {
-      greeting: 'Hi, I am ',
-      name: 'Demerson Guilherme',
-      title: 'Full Stack Developer',
-      subtitle: 'Turning coffee into code and ideas into reality',
-      cta: 'View Projects',
-      scroll: 'Scroll to discover more'
-    }
+      greeting: "Hi, I am ",
+      name: "Demerson Guilherme",
+      title: "Full Stack Developer",
+      subtitle: "Turning coffee into code and ideas into reality",
+      cta: "View Projects",
+      scroll: "Scroll to discover more",
+    },
   };
 
   const handleCTAClick = () => {
-    const element = document.querySelector('#projects');
+    const element = document.querySelector("#projects");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const handleScrollClick = () => {
-    const element = document.querySelector('#about');
+    const element = document.querySelector("#about");
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   const socialLinks = [
-    { icon: Github, href: 'https://github.com/Demershow', label: 'GitHub' },
-    { icon: Linkedin, href: 'https://br.linkedin.com/in/demerson-guilherme-190774218', label: 'LinkedIn' },
-    { icon: Mail, href: 'mailto:demersontorres520@gmail.com', label: 'Email' }
+    { icon: Github, href: "https://github.com/Demershow", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://br.linkedin.com/in/demerson-guilherme-190774218",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: "mailto:demersontorres520@gmail.com", label: "Email" },
   ];
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="hero"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: 'linear-gradient(rgba(255, 107, 53, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53, 0.1) 1px, transparent 1px)',
-          backgroundSize: '50px 50px'
-        }} />
-        
-        <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, 50, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 8,
-            repeat: Infinity,
-            ease: "easeInOut"
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage:
+              "linear-gradient(rgba(255, 107, 53, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 107, 53, 0.1) 1px, transparent 1px)",
+            backgroundSize: "50px 50px",
           }}
         />
-        <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-3xl"
-          animate={{
-            x: [0, -100, 0],
-            y: [0, -50, 0],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
+
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-3xl animate-blob-1" />
+
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-secondary/30 rounded-full blur-3xl animate-blob-2" />
 
         <div className="absolute inset-0 opacity-10">
           {[...Array(5)].map((_, i) => (
@@ -87,13 +75,13 @@ export function Hero({ language }: HeroProps) {
               key={i}
               className="absolute h-1 bg-linear-to-r from-transparent via-primary to-transparent"
               style={{ top: `${20 + i * 20}%` }}
-              initial={{ x: '-100%', width: '200px' }}
-              animate={{ x: '100vw' }}
+              initial={{ x: "-100%", width: "200px" }}
+              animate={{ x: "100vw" }}
               transition={{
                 duration: 3 + i * 0.5,
                 repeat: Infinity,
                 delay: i * 0.3,
-                ease: "linear"
+                ease: "linear",
               }}
             />
           ))}
@@ -176,19 +164,19 @@ export function Hero({ language }: HeroProps) {
           </motion.button>
         </motion.div>
 
-        <motion.div
-          className="absolute top-124 left-1/2 transform -translate-x-1/2 cursor-pointer"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, y: [0, 10, 0] }}
-          transition={{
-            opacity: { delay: 1.2 },
-            y: { duration: 2, repeat: Infinity }
-          }}
+        <div
+          className="
+    absolute top-124 left-1/2 -translate-x-1/2
+    cursor-pointer
+    animate-bounce
+  "
           onClick={handleScrollClick}
         >
-          <p className="text-sm text-muted-foreground mb-2">{content[language].scroll}</p>
+          <p className="text-sm text-muted-foreground mb-2 text-center">
+            {content[language].scroll}
+          </p>
           <ChevronDown className="w-6 h-6 mx-auto text-primary" />
-        </motion.div>
+        </div>
       </div>
     </section>
   );
