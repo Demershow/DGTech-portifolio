@@ -17,8 +17,8 @@ export function Projects({ language }: ProjectsProps) {
     pt: {
       title: "Projetos em Destaque",
       subtitle: "Alguns dos trabalhos que me orgulho de ter criado",
-      viewLive: "Ver ao Vivo",
-      viewCode: "Ver Código",
+      viewLive: "Abrir projeto",
+      viewCode: "Abrir Código",
       projects: [
         {
           title: "Carspotting App",
@@ -84,7 +84,7 @@ export function Projects({ language }: ProjectsProps) {
     en: {
       title: "Featured Projects",
       subtitle: "Some of the work I'm proud to have created",
-      viewLive: "View Live",
+      viewLive: "Open Project",
       viewCode: "View Code",
       projects: [
         {
@@ -211,7 +211,7 @@ export function Projects({ language }: ProjectsProps) {
         <div className="flex justify-center gap-4 mb-8">
           <motion.button
             onClick={() => swiperRef.current?.slidePrev()}
-            className="p-4 rounded-full bg-muted hover:bg-primary/20 transition-colors"
+            className="cursor-pointer p-4 rounded-full bg-muted hover:bg-primary/20 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Previous"
@@ -221,7 +221,7 @@ export function Projects({ language }: ProjectsProps) {
 
           <motion.button
             onClick={() => swiperRef.current?.slideNext()}
-            className="p-4 rounded-full bg-muted hover:bg-primary/20 transition-colors"
+            className="cursor-pointer p-4 rounded-full bg-muted hover:bg-primary/20 transition-colors"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.95 }}
             aria-label="Next"
@@ -258,14 +258,13 @@ export function Projects({ language }: ProjectsProps) {
                   className="bg-card border border-border rounded-xl overflow-hidden hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/10 flex flex-col"
                   style={{ minHeight: "550px" }}
                 >
-                  {/* Project Image */}
-                  <div className="relative h-64 overflow-hidden bg-muted flex-shrink-0">
+                  <div className="relative h-64 overflow-hidden bg-muted shrink-0">
                     <ImageWithFallback
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-card/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center gap-4 pb-6">
+                    <div className="absolute inset-0 bg-linear-to-t from-card/90 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center gap-4 pb-6">
                       <motion.a
                         href={project.demo}
                         target="_blank"

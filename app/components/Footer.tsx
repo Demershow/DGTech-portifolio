@@ -21,9 +21,13 @@ export function Footer({ language }: FooterProps) {
   };
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Mail, href: "mailto:seu@email.com", label: "Email" },
+    { icon: Github, href: "https://github.com/Demershow", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://br.linkedin.com/in/demerson-guilherme-190774218",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: "mailto:demersontorres520@gmail.com", label: "Email" },
   ];
 
   return (
