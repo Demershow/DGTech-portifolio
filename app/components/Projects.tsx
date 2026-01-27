@@ -21,7 +21,7 @@ export function Projects({ language }: ProjectsProps) {
       viewCode: "Abrir Código",
       projects: [
         {
-          title: "Carspotting App",
+          title: "Carspotting App (em desenvolvimento)",
           description:
             "Plataforma de gerenciamento de spotting de carros com IA, para apaixonados pelos motores como eu.",
           tags: ["React native", "Django", "IA", "TypeScript"],
@@ -31,37 +31,17 @@ export function Projects({ language }: ProjectsProps) {
           demo: "https://example.com",
         },
         {
-          title: "GameHub",
+          title: "Wallace bispo - Portfolio",
           description:
-            "Rede social para gamers com sistema de matchmaking e chat em tempo real.",
-          tags: ["Next.js", "PostgreSQL", "Prisma", "TailwindCSS"],
-          image:
-            "https://images.unsplash.com/photo-1614179924047-e1ab49a0a0cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBzZXR1cHxlbnwxfHx8fDE3Njc4Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
-        },
-        {
-          title: "PhotoStream",
-          description:
-            "Plataforma de portfólio para fotógrafos com galeria responsiva.",
-          tags: ["Next.js", "Firebase", "Cloudinary", "GSAP"],
+            "Portfólio de fotografia responsivo de um de meus clientes.",
+          tags: ["Next.js"],
           image:
             "https://images.unsplash.com/photo-1622319977720-9949ac28adc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMGNhbWVyYXxlbnwxfHx8fDE3Njc5MDQ1OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
+          github: "https://github.com/Demershow/wallace-bispo-landing",
+          demo: "https://wallace-bispo-landing.vercel.app/",
         },
         {
-          title: "DevTools Suite",
-          description:
-            "Conjunto de ferramentas para desenvolvedores incluindo gerador de snippets e conversor de código.",
-          tags: ["React", "Express", "MongoDB", "Redis"],
-          image:
-            "https://images.unsplash.com/photo-1576936422505-18d321d54d40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RlJTIwZGV2ZWxvcGVyfGVufDF8fHx8MTc2Nzk1NzQ5OHww&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
-        },
-        {
-          title: "SpeedDash Analytics",
+          title: "SpeedDash Analytics (em desenvolvimento)",
           description:
             "Dashboard de análise de performance em tempo real com visualizações interativas e métricas customizadas.",
           tags: ["React", "D3.js", "GraphQL", "Python"],
@@ -88,50 +68,29 @@ export function Projects({ language }: ProjectsProps) {
       viewCode: "View Code",
       projects: [
         {
-          title: "Carspotting App",
+          title: "Carspotting App (WIP)",
           description:
             "Management of car spotting with AI, for the passionates by the engines, like me.",
-          tags: ["React native", "Django", "IA", "TypeScript"],
+          tags: ["React native", "Django", "AI", "TypeScript"],
           image:
             "https://images.unsplash.com/photo-1747115986530-b926e92bf563?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYWNpbmclMjBjYXIlMjBzcGVlZHxlbnwxfHx8fDE3Njc5MTA1OTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
           github: "https://github.com",
           demo: "https://example.com",
         },
         {
-          title: "GameHub",
-          description:
-            "Social network for gamers with matchmaking system and real-time chat.",
-          tags: ["Next.js", "PostgreSQL", "Prisma", "TailwindCSS"],
-          image:
-            "https://images.unsplash.com/photo-1614179924047-e1ab49a0a0cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYW1pbmclMjBzZXR1cHxlbnwxfHx8fDE3Njc4Mzc3OTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
-        },
-        {
-          title: "PhotoStream",
-          description:
-            "Portfolio platform for photographers with responsive gallery and image editing.",
-          tags: ["Vue.js", "Firebase", "Cloudinary", "GSAP"],
+          title: "Wallace bispo - Portfolio",
+          description: "Photography portfolio from one of my customers.",
+          tags: ["Next.js"],
           image:
             "https://images.unsplash.com/photo-1622319977720-9949ac28adc4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwaG90b2dyYXBoeSUyMGNhbWVyYXxlbnwxfHx8fDE3Njc5MDQ1OTZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
+          github: "https://github.com/Demershow/wallace-bispo-landing",
+          demo: "https://wallace-bispo-landing.vercel.app/",
         },
         {
-          title: "DevTools Suite",
-          description:
-            "Developer tools suite including snippet generator and code converter.",
-          tags: ["React", "Express", "MongoDB", "Redis"],
-          image:
-            "https://images.unsplash.com/photo-1576936422505-18d321d54d40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RlJTIwZGV2ZWxvcGVyfGVufDF8fHx8MTc2Nzk1NzQ5OHww&ixlib=rb-4.1.0&q=80&w=1080",
-          github: "https://github.com",
-          demo: "https://example.com",
-        },
-        {
-          title: "SpeedDash Analytics",
+          title: "SpeedDash Analytics (WIP)",
           description:
             "Real-time performance analysis dashboard with interactive visualizations and custom metrics.",
-          tags: ["React", "D3.js", "GraphQL", "Python"],
+          tags: ["React", "D3.js", "AI Agent", "Python", "Django"],
           image:
             "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXNoYm9hcmQlMjBhbmFseXRpY3N8ZW58MXx8fHwxNjc3OTU3NDk4fDA&ixlib=rb-4.1.0&q=80&w=1080",
           github: "https://github.com",
@@ -141,7 +100,7 @@ export function Projects({ language }: ProjectsProps) {
           title: "NoobPrice",
           description:
             "Steam games price comparator, made for gamers, by gamers",
-          tags: ["Next.js", "Vercel", "JS"],
+          tags: ["Next.js", "Vercel", "JS", "Extensions"],
           image: "/img/Noobprice.png",
           github: "https://github.com/Demershow/noob-price",
           demo: "https://chromewebstore.google.com/detail/noobprice/pbhpckfneonklaalekiakpbadgeaapcg",
